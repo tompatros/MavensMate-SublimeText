@@ -158,7 +158,7 @@ module MavensMate
       zip_file = retrieve_request_hash[:check_retrieve_status_response][:result][:zip_file]
     end
 
-    def run_tests(tests=[], debug_options)
+    def run_tests(tests=[], debug_options={})
       test_xml = ""
       tests.each do |t|
         test_xml << "<classes>#{t}</classes>"
